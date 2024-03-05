@@ -99,10 +99,10 @@ def add_user(cid):
     session.add(user)
     session.commit()
     user_id = get_user(cid)
-    insert_firstWord(user_id)
+    insert_firstword(user_id)
 
 
-def insert_firstWord(user_id):
+def insert_firstword(user_id):
     """  присваивания начальной базы слов
 
     :param user_id:
@@ -242,7 +242,6 @@ def delete_word(cid, word):
 config.read('settings.ini')
 TOKEN = config['token']['token']
 bot = telebot.TeleBot(TOKEN)
-
 
 
 if __name__ == '__main__':
